@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey From</title>
+    <link href="style1.css" rel="stylesheet" />
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+        <div class="main">
+            <div class="container">
+                <legend style="color: #ffffff; font-size:30px; text-align: center; font-family:Verdana, Geneva, Tahoma, sans-serif; padding: 20px;">
+                    Customer Survey Form
+                </legend>
+                <div class="calc">   
+                    <div class="disp">
+                        <form name="myForm" onsubmit="return validateForm()" method="get" action="form.html">
+                                <div class="row">
+                                    <div class="col">
+                                    <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >First Name</label><br>
+                                    <input type="text" name="fn"  placeholder="Enter First name" required="" onkeyup="validateFname()">
+                                    <div id="fnerror" style="color:white;" aria-live="polite"></div>
+                                    </div>
+                                    <div class="col">
+                                        <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >Last Name</label><br>
+                                    <input type="text" name="ln"  placeholder="Enter Last name" required="" onkeyup="validateLname()">
+                                   <div id="lnerror" style="color: white;" aria-live="polite"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                    <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Date Of Birth</label><br>
+                                    <input type="date"  name="db" required="*" min="1900-01-01" max="2023-10-04">
+                                    </div>
+                                    <div class="col">
+                                        <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Country</label><br>
+                                        <select required="*" name="Country">
+                                            <option selected="" value="Default">Select Your Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AM">Armenia</option>
+                                            <option value="AZ">Azerbaijan</option>
+                                            <option value="BH">Bahrain</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="BT">Bhutan</option>
+                                            <option value="IO">British Indian Ocean Territory</option>
+                                            <option value="BN">Brunei Darussalam</option>
+                                            <option value="KH">Cambodia</option>
+                                            <option value="CN">China</option>
+                                            <option value="CX">Christmas Island</option>
+                                            <option value="CC">Cocos (Keeling) Islands</option>
+                                            <option value="CY">Cyprus</option>
+                                            <option value="GE">Georgia</option>
+                                            <option value="HK">Hong Kong</option>
+                                            <option value="IN">India</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="IR">Iran, Islamic Republic of</option>
+                                            <option value="IQ">Iraq</option>
+                                            <option value="IL">Israel</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="JO">Jordan</option>
+                                            <option value="KZ">Kazakhstan</option>
+                                            <option value="KP">Korea, Democratic People's Republic of</option>
+                                            <option value="KR">Korea, Republic of</option>
+                                            <option value="KW">Kuwait</option>
+                                            <option value="KG">Kyrgyzstan</option>
+                                            <option value="LA">Lao People's Democratic Republic</option>
+                                            <option value="LB">Lebanon</option>
+                                            <option value="MO">Macao</option>
+                                            <option value="MY">Malaysia</option>
+                                            <option value="MV">Maldives</option>
+                                            <option value="MN">Mongolia</option>
+                                            <option value="MM">Myanmar</option>
+                                            <option value="NP">Nepal</option>
+                                            <option value="OM">Oman</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="PS">Palestinian Territory, Occupied</option>
+                                            <option value="PH">Philippines</option>
+                                            <option value="QA">Qatar</option>
+                                            <option value="RU">Russian Federation</option>
+                                            <option value="SA">Saudi Arabia</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="LK">Sri Lanka</option>
+                                            <option value="SY">Syrian Arab Republic</option>
+                                            <option value="TW">Taiwan, Province of China</option>
+                                            <option value="TJ">Tajikistan</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="TL">Timor-Leste</option>
+                                            <option value="TR">Turkey</option>
+                                            <option value="TM">Turkmenistan</option>
+                                            <option value="AE">United Arab Emirates</option>
+                                            <option value="UZ">Uzbekistan</option>
+                                            <option value="VN">Viet Nam</option>
+                                            <option value="YE">Yemen</option>
+                                        </select>
+                                        <div id="cerror" style="color: white;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                           <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >Gender</label><br>
+                                           <p> 
+                                            <label><input type="checkbox" class="checkoption" name="male" value="Male" id="gen1"  >Male</label> 
+                                            <label><input type="checkbox" class="checkoption" name="female" value="Female" id="gen2" >Female</label>
+                                            <label><input type="checkbox" class="checkoption" name="others" value="Others" id="gen3" >Others</label>
+                                            </p>
+                                            <div id="gerror" style="color: white;"></div>
+                                    </div>
+                                    <div class="col">
+                                        <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >Profession</label><br>
+                                        <input type="text" placeholder="Software Engineer" required="*" name="profession">
+                                        <div id="perror" style="color: white;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                    <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" for="email" >E-Mail</label><br>
+                                    <input type="email" name="email" placeholder="abc@gmail.com" required="*" >
+                                    <div id="mailerror" style="color: white;"></div>
+                                    </div>
+                                    <div class="col">
+                                    <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >Mobile Number</label><br>
+                                    <input type="tel" placeholder="+91 12345 67890" required="*"  name="mob">
+                                    <div id="merror" style="color: white;"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col">
+                                    <input type="submit" value="SUBMIT"  style="text-align: center; height: 40px; width: 200px; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(0, 166, 255); border: 0px; color:white; position: static;" id="submit">
+                                    </div>
+                                    <div class="col">
+                                     <input type="reset" value="RESET"  style="text-align: center; height: 40px; width: 200px; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(0, 166, 255); border: 0px; color: white; position: static;" id="reset" onclick="window.location.reload()">   
+                                    </div>
+                                </div>
+                            
+                        </form>
+        
+                    </div>
+                </div>
+                <div style="color: white;font-size: 20px;text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <p>&copy; 2023 Customer Survey Form. All Rights Reserved | Designed by <span style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Nageswarao</span></p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="drop.js"></script>   
+        <script type="text/javascript" src="myScript.js"></script>
+
+</body>
+</html>
+
+

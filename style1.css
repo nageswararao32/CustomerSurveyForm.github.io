@@ -1,0 +1,114 @@
+
+.container{
+    background-color:rgb(0, 166, 255);
+    width: 900px;
+    height: 710px;
+ 
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.disp{
+    background-color: white;
+    width: 600px;
+    height: 580px;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding: 18px;
+}
+input{
+    margin-top: 10px;
+    border: 1px solid slategrey;
+    width: 250px;
+    height: 30px;
+}
+
+label{
+    font-size: 20px;
+}
+
+
+
+select{
+    margin-top: 10px;
+    border: 1px solid slategrey;
+    width: 250px;
+    height: 30px;
+}
+#gen1, #gen2, #gen3{
+    margin-top: 10px;
+    border: 1px solid slategray;
+    width: 20px;
+    height: 15px;
+} 
+
+input:focus{
+    outline: 0px;
+}
+
+.invalid {
+    border-color: #900;
+    background-color: #fdd;
+  }
+
+
+  
+  input:focus.invalid {
+    outline: none;
+  }
+  
+  /* This is the style of our error messages */
+  .invalid , #fnerror  #lnerror  #gerror  #perror  #merror{
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color:white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  #fnerror.active #lnerror.active #gerror.active  #merror.active #perror.active{
+    padding: 0.3em;
+  }
+
+
+  .valid {
+    border-color: #900;
+    background-color: #fdd;
+  }
+
+
+  
+  input:focus.valid {
+    outline: none;
+  }
+
+.valid{
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: seagreen;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+
+
+
+ 
+
+
