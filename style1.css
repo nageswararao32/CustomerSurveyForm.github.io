@@ -1,103 +1,295 @@
+.container {
+  background-color: rgb(0, 166, 255);
+  width: 900px;
+  height: auto;
 
-.container{
-    background-color:rgb(0, 166, 255);
-    width: 900px;
-    height: 710px;
- 
 }
-.main{
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.disp {
+  background-color: white;
+  width: 600px;
+  height: 580px;
+  box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+.calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px;
+}
+
+input {
+  margin-top: 10px;
+  border: 1px solid slategrey;
+  width: 250px;
+  height: 30px;
+}
+
+label {
+  font-size: 20px;
+}
+
+
+
+select {
+  margin-top: 10px;
+  border: 1px solid slategrey;
+  width: 250px;
+  height: 30px;
+}
+
+#gen1,
+#gen2,
+#gen3 {
+  margin-top: 10px;
+  border: 1px solid slategray;
+  width: 20px;
+  height: 15px;
+}
+
+input:focus {
+  outline: 0px;
+}
+
+.invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px;
+}
+
+
+input:focus.invalid {
+  outline: none;
+}
+
+
+.invalid,
+#fnerror #lnerror #gerror #perror #merror {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+#fnerror.active #lnerror.active #gerror.active #merror.active #perror.active {
+  padding: 0.3em;
+}
+
+
+.valid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+
+
+input:focus.valid {
+  outline: none;
+}
+
+.valid {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: seagreen;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+.marquee {
+  overflow: hidden; 
+  white-space: nowrap; 
+  width: 100%; 
+  background: #f0f0f0;
+  position: relative; 
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%; 
+  animation: marquee-animation 10s linear infinite;
+}
+
+@keyframes marquee-animation {
+  0% {
+      transform: translateX(0); 
+  }
+  100% {
+      transform: translateX(-100%); 
+  }
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+      max-width: 80%;
+      margin: 0 auto;
+  }
+
+  .row {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .col {
+      width: 48%;
+  }
+
+  input[type="submit"], input[type="reset"] {
+      width: 48%;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .container {
+    background-color: rgb(0, 166, 255);
+    width: 400px;
+    height: auto;
+  }
+  
+  .main {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 30px;
-}
-.disp{
+  }
+  
+  .disp {
     background-color: white;
-    width: 600px;
-    height: 580px;
+    width: 450px;
+    height: auto;
     box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
-}
-.calc{
+  }
+  
+  .calc {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.row{
+  }
+  
+  .row {
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     padding: 18px;
-}
-input{
+    margin: 10px;
+  }
+
+  #abcd{
+    margin:15px;
+  }
+
+  .btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px;
+  }
+  
+  input {
     margin-top: 10px;
     border: 1px solid slategrey;
     width: 250px;
     height: 30px;
-}
-
-label{
+  }
+  
+  label {
     font-size: 20px;
-}
-
-
-
-select{
+  }
+  
+  
+  
+  select {
     margin-top: 10px;
     border: 1px solid slategrey;
     width: 250px;
     height: 30px;
-}
-#gen1, #gen2, #gen3{
+  }
+  
+  #gen1,
+  #gen2,
+  #gen3 {
     margin-top: 10px;
     border: 1px solid slategray;
     width: 20px;
     height: 15px;
-} 
-
-input:focus{
+  }
+  
+  input:focus {
     outline: 0px;
-}
-
-.invalid {
+  }
+  
+  .invalid {
     border-color: #900;
     background-color: #fdd;
   }
-
-
+  
+  
   
   input:focus.invalid {
     outline: none;
   }
   
-  /* This is the style of our error messages */
-  .invalid , #fnerror  #lnerror  #gerror  #perror  #merror{
+  
+  .invalid,
+  #fnerror #lnerror #gerror #perror #merror {
     width: 100%;
     padding: 0;
     font-size: 80%;
-    color:white;
+    color: white;
     background-color: #900;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
   }
   
-  #fnerror.active #lnerror.active #gerror.active  #merror.active #perror.active{
+  #fnerror.active #lnerror.active #gerror.active #merror.active #perror.active {
     padding: 0.3em;
   }
-
-
+  
+  
   .valid {
     border-color: #900;
     background-color: #fdd;
   }
-
-
+  
+  
   
   input:focus.valid {
     outline: none;
   }
-
-.valid{
+  
+  .valid {
     width: 100%;
     padding: 0;
     font-size: 80%;
@@ -105,10 +297,6 @@ input:focus{
     background-color: seagreen;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
+  }
 }
-
-
-
- 
-
 

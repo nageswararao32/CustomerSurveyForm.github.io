@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <link href="style1.css" rel="stylesheet" />
+    <style>
+        .details-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px;
+            justify-content: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        li strong {
+            color: #007BFF;
+            font-size: 1.2em;
+        }
+
+
+        li span {
+            color: #333;
+            font-size: 1em;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <div class="marquee-content">
+            <h3 style="color:green;">Your data is Submitted successfully!</h3>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center;">
+    <div class="details-container">
+        <h2 style="text-align: center;color: orange;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Your Submitted Details:</h2>
+        <ul>
+            <li><strong>First Name: </strong> <span id="firstName"></span></li>
+            <li><strong>Last Name: </strong> <span id="lastName"></span></li>
+            <li><strong>Date of Birth: </strong> <span id="dateOfBirth"></span></li>
+            <li><strong>Country: </strong> <span id="country"></span></li>
+            <li><strong>Gender: </strong> <span id="gender"></span></li>
+            <li><strong>Profession: </strong> <span id="profession"></span></li>
+            <li><strong>Email: </strong> <span id="email"></span></li>
+            <li><strong>Mobile: </strong> <span id="mobile"></span></li>
+        </ul>
+    </div>
+    </div>
+    <script>
+        document.getElementById("firstName").innerText = localStorage.getItem("firstName");
+        document.getElementById("lastName").innerText = localStorage.getItem("lastName");
+        document.getElementById("dateOfBirth").innerText = localStorage.getItem("dateOfBirth");
+        document.getElementById("country").innerText = localStorage.getItem("country");
+        document.getElementById("gender").innerText = localStorage.getItem("gender");
+        document.getElementById("profession").innerText = localStorage.getItem("profession");
+        document.getElementById("email").innerText = localStorage.getItem("email");
+        document.getElementById("mobile").innerText = localStorage.getItem("mobile");
+    </script>
+</body>
+
+</html>
